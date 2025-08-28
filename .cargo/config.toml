@@ -1,0 +1,15 @@
+[build]
+# 为本机构建优化，但不强制LTO（避免与依赖冲突）
+rustflags = ["-C", "target-cpu=native"]
+
+[profile.release]
+# 优化配置
+opt-level = 3          # 最高级别的优化
+lto = "thin"           # 使用thin LTO以减少编译时间并保持兼容性
+codegen-units = 1      # 减少并行代码生成单元以提高优化效果
+panic = "abort"        # 在panic时中止以减小二进制文件大小
+strip = true           # 去除调试符号
+
+# 对于特定依赖包的优化配置
+[profile.release.package."*"]
+opt-level = 3          # 优化所有依赖项的性能
