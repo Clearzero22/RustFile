@@ -1,6 +1,6 @@
 //! CLI参数解析模块
 
-use clap::{Parser, Subcommand, Args};
+use clap::{Args, Parser, Subcommand};
 
 /// Rust Terminal File Manager
 #[derive(Parser)]
@@ -23,15 +23,15 @@ pub struct ListArgs {
     /// Path to the directory to list
     #[arg(default_value = ".", value_parser)]
     pub path: String,
-    
+
     /// Display detailed information (size, modified time, permissions)
     #[arg(short, long)]
     pub long: bool,
-    
+
     /// Display tree structure
     #[arg(short, long)]
     pub tree: bool,
-    
+
     /// Limit tree depth
     #[arg(short = 'D', long, requires = "tree")] // Changed short flag to 'D' to avoid conflict
     pub depth: Option<usize>,
