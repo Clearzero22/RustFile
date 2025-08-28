@@ -1,15 +1,15 @@
-# File Manager (fmg)
+# 📁 File Manager (fmg)
 
 A command-line file manager written in Rust with tree view and detailed listing capabilities.
 
-## Features
+## 🌟 Features
 
-- List directory contents with colors
-- Tree view of directory structure
-- Long format listing with file details
-- Cross-platform support (Windows, macOS, Linux)
+- 🎨 List directory contents with colors
+- 🌲 Tree view of directory structure
+- 📋 Long format listing with file details
+- 🖥️ Cross-platform support (Windows, macOS, Linux)
 
-## Installation
+## 🚀 Installation
 
 ### From source
 
@@ -25,7 +25,7 @@ cargo install --path .
 cargo install file-manage
 ```
 
-## Usage
+## 📖 Usage
 
 ```bash
 # List current directory
@@ -47,7 +47,7 @@ fmg list --tree --depth 2
 fmg ls
 ```
 
-## Building
+## 🛠️ Building
 
 ```bash
 # Development build
@@ -60,14 +60,14 @@ cargo build --release
 cargo test
 ```
 
-## Automation
+## ⚙️ Automation
 
 This project uses GitHub Actions for continuous integration:
-- Code checking on multiple platforms
-- Automated testing
-- Code formatting validation
-- Clippy linting
+- ✅ Code checking on multiple platforms
+- 🧪 Automated testing
+- 📏 Code formatting validation
+- 🧹 Clippy linting
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
