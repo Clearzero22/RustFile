@@ -2,8 +2,20 @@
 name = "file-manage"
 version = "0.1.0"
 edition = "2024"
+authors = ["Your Name <your.email@example.com>"]
+description = "A command-line file manager with tree view and detailed listing capabilities"
+license = "MIT"
+repository = "https://github.com/yourusername/file-manage"
+keywords = ["cli", "file-manager", "terminal", "tree"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.5.46", features = ["derive"] }
 colored = "3.0.0"
 time = "0.3.41"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
