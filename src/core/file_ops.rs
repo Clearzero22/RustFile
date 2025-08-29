@@ -160,7 +160,7 @@ fn list_directory_tree_with_ancestors(
                 let is_last = i == count - 1;
 
                 // Create prefix for tree structure using the new formatter
-                let prefix = format_tree_prefix(is_last, ancestors);
+                let prefix = format_tree_prefix(is_last, ancestors, current_depth);
 
                 if file_path.is_dir() {
                     if long_format {
